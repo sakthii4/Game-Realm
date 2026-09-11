@@ -1,0 +1,75 @@
+Game Realm - Project Presentation Document
+
+Project Overview
+Game Realm is a gaming e-commerce frontend website designed for selling gaming products such as consoles, games, and accessories. The project aims to provide a modern online shopping experience for gamers, with product browsing, product details, login/signup, and cart management.
+
+Main Purpose
+The project demonstrates how a static web application can mimic an online gaming store. It focuses on user experience, product presentation, and front-end logic without using a backend database.
+
+Technologies Used
+- HTML5: Structure of all pages
+- CSS3: Styling, layout, colors, cards, hero section, responsive design
+- JavaScript: Dynamic logic for product rendering, cart behavior, login/signup, and storage
+- Bootstrap 5: Responsive layout, buttons, navigation, cards, and forms
+- Font Awesome: Icons for cart, support, shipping, and UI elements
+- JSON Data File: Stores product information for consoles, games, and accessories
+- LocalStorage: Saves cart items and logged-in user information in the browser
+
+Project Structure
+- index.html: Home page with gaming hero section and featured products
+- consoles.html: Displays console products
+- games.html: Displays game products
+- accesseries.html: Displays accessories category
+- product.html: Shows full product details for a selected item
+- cart.html: Handles shopping cart actions and total calculations
+- login_signup.html: User login and sign-up page
+- data.json: Product dataset used by the website
+- css/style.css: Custom styling and theme design
+- assets/: Images and game product visuals
+
+Core Features
+1. Home Page Design
+- Hero banner with main gaming branding
+- Promotional sections and products cards
+- Feature callouts like free shipping and support
+
+2. Category Pages
+- Separate pages for consoles, games, and accessories
+- Product cards with image, name, price, and rating
+- Dynamic product display from JSON data
+
+3. Product Details Page
+- When a user clicks a product, the selected item is stored in localStorage
+- Product details page reads the stored item and shows image, price, rating, category, and description
+
+4. Cart Management
+- Users can add products to the cart
+- Cart count updates dynamically
+- Quantity can be increased, decreased, or removed
+- Cart subtotal and total are calculated using JavaScript
+
+5. User Authentication
+- Login and signup forms validate email and password entries
+- User details are saved in localStorage
+- Existing users cannot register with duplicate username or email
+
+6. Responsive Interface
+- The site adapts to mobile, tablet, and desktop screens using Bootstrap and custom CSS
+
+Core Logic of the Project
+The project uses a simple frontend architecture:
+
+- Product data is stored in data.json.
+- JavaScript fetches this file and renders products based on category.
+- Each product card stores the selected item in localStorage using the key selected_item.
+- The product details page reads that selected item and generates a dynamic UI.
+- The cart uses localStorage under the key cart.
+- Whenever a user adds an item, cart data is updated and displayed in the navigation bar.
+- The login/signup logic stores user information in localStorage under gamerealmUsers.
+- JavaScript functions handle validation, form submission, updates, and UI rendering.
+
+Why This Project Is Important
+This project showcases front-end development skills, including UI/UX design, state management using localStorage, data-driven rendering, form validation, and responsive web development. It is a good example of how a modern online storefront can be built using only frontend technologies.
+
+Conclusion
+Game Realm is a complete gaming store mockup that demonstrates e-commerce design and behavior. It combines clean layout, product catalog management, cart functionality, and user authentication in a simple yet professional frontend project.
