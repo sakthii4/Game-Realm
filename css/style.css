@@ -1,0 +1,568 @@
+
+/* =========================================================
+   1. GLOBAL RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   2. COLOR VARIABLES
+========================================================= */
+
+:root {
+
+    /* Background Colors */
+    --bg-dark: #000a1a;
+    --bg-container: #001125;
+    --bg-card-hover: #13172e;
+
+    /* Primary Colors */
+    --primary-purple: #6c47ff;
+    --primary-purple-hover: #5835e5;
+    --accent-cyan: #00d2ff;
+
+    /* Text Colors */
+    --text-white: #ffffff;
+    --text-muted: #8e95b2;
+    --text-dark: #0f172a;
+
+    /* Rating / Status */
+    --accent-yellow: #ffb800;
+
+    /* Borders and Inputs */
+    --border-color: #1a203d;
+    --input-bg: #11152a;
+}
+
+
+/* =========================================================
+   3. BODY
+========================================================= */
+
+body {
+    background-color: var(--bg-dark);
+    margin: 20px;
+}
+
+
+/* =========================================================
+   4. HEADER
+========================================================= */
+
+header {
+    background-color: var(--bg-container);
+    color: var(--text-white);
+
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+}
+
+
+/* Header Logo */
+
+header div img {
+    width: 200px;
+    height: 80px;
+}
+
+
+/* Navigation Links */
+
+.custom-header .custom-link {
+    color: var(--text-white) !important;
+
+    font-weight: 500;
+    padding-bottom: 4px;
+
+    transition: opacity 0.2s ease;
+}
+
+
+.custom-header .custom-link:hover {
+    opacity: 0.8;
+}
+
+
+/* Purple Button */
+
+.btn-purple {
+    background-color: var(--primary-purple-hover);
+    color: var(--text-white);
+}
+
+
+.btn-purple:hover {
+    background-color: #7322bf;
+    color: var(--text-white);
+}
+
+.btn-purple:visited{
+     background-color: #7322bf !important;
+    color: var(--text-white);
+}
+
+/* Bootstrap Primary Button Override */
+
+.btn-primary {
+    background-color: #5733e6 !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+
+
+
+/* =========================================================
+   5. HERO SECTION
+========================================================= */
+
+.hero-section {
+    position: relative;
+    width: 100%;
+}
+
+
+/* Hero Image */
+
+.hero-section .img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* Hero Text */
+
+.hero-section .text {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+
+/* Custom Text Color */
+
+.text-purple {
+    color: #2874a8;
+}
+
+
+/* =========================================================
+   6. FEATURES / POSITIVE SECTION
+========================================================= */
+
+.postive {
+    min-width: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   7. GENERAL CARD STYLE
+========================================================= */
+
+.card {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+
+    border: 2px solid var(--border-color);
+}
+
+
+/* =========================================================
+   8. GAME CARDS
+========================================================= */
+
+.game-card {
+    height: 100%;
+}
+
+
+/* Game Image Container */
+
+.game-image-container {
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+
+    overflow: hidden;
+
+    background-color: transparent;
+}
+
+
+/* Game Image */
+
+.game-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: fill;
+}
+
+
+/* Game Card Body */
+
+.game-card .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Game Title */
+
+.game-card .card-title {
+    min-height: 50px;
+}
+
+
+/* Rating */
+
+.rating {
+    margin-bottom: 15px;
+}
+
+
+/* Add to Cart Button */
+
+.add-cart {
+    width: 100%;
+    margin-top: auto;
+}
+
+
+/* =========================================================
+   9. GAMING ACCESSORIES BANNER
+========================================================= */
+
+.gaming-accesseries {
+    position: relative;
+
+    padding: 10px;
+
+    border: 2px solid var(--border-color);
+}
+
+
+/* Banner Content */
+
+.gaming-accesseries .content {
+    position: absolute;
+
+    bottom: 20px;
+    left: 20px;
+}
+
+
+/* =========================================================
+   10. ACCESSORIES PRODUCT CARDS
+========================================================= */
+
+.acc {
+    overflow: hidden;
+
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+
+/* Product Image Area */
+
+.product-img {
+    width: 100%;
+    height: 220px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* Product Image */
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* Accessories Card Body */
+
+.acc .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Accessories Card Title */
+
+.acc .card-title {
+    min-height: 48px;
+    margin-bottom: 8px;
+}
+
+
+/* Product Price */
+
+.acc .card-text {
+    font-weight: bold;
+}
+
+
+/* Product Button */
+
+.acc .btn {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+
+/* =========================================================
+   11. FOOTER
+========================================================= */
+
+footer {
+    border: 2px solid var(--bg-dark);
+}
+
+
+.footer {
+    color: var(--text-white);
+
+    padding: 50px 0 20px;
+    margin-top: 40px;
+}
+
+
+/* Footer Logo */
+
+.footer-logo {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+
+    margin-bottom: 15px;
+}
+
+
+/* Footer Heading */
+
+.footer-col h4 {
+    margin-bottom: 20px;
+
+    font-size: 20px;
+}
+
+
+/* Footer Paragraph */
+
+.footer-col p {
+    margin: 0;
+
+    color: #aaa;
+}
+
+
+/* Footer Links */
+
+.footer-col > a {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #aaa;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.footer-col > a:hover {
+    color: var(--text-white);
+}
+
+
+/* =========================================================
+   12. SOCIAL MEDIA ICONS
+========================================================= */
+
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+.social-icons a {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--text-white);
+    text-decoration: none;
+
+    border: 1px solid #555;
+    border-radius: 50%;
+
+    transition: 0.3s;
+}
+
+
+.social-icons a:hover {
+    background-color: var(--text-white);
+    color: #111;
+
+    transform: translateY(-3px);
+}
+
+
+.social-icons i {
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   13. COPYRIGHT
+========================================================= */
+
+.footer hr {
+    margin: 35px 0 20px;
+
+    border-color: #444;
+}
+
+
+.copyright {
+    text-align: center;
+}
+
+
+.copyright p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+#cart-size{
+    position: relative;
+    bottom: 15px;
+    color: var(--text-muted);
+    color: yellow;
+    background-color: rgb(255, 0, 0);
+    padding:2px 8px;
+    border-radius: 50px;
+    
+}
+
+/* =========================================================
+   14. RESPONSIVE DESIGN
+========================================================= */
+
+
+/* -------------------------
+   Tablet
+   Maximum width: 991px
+-------------------------- */
+
+@media (max-width: 991px) {
+
+    .product-img {
+        height: 200px;
+    }
+
+}
+
+
+/* -------------------------
+   Medium Screens
+   Minimum width: 760px
+-------------------------- */
+
+@media (min-width: 760px) {
+
+    .gaming-accesseries .content {
+        bottom: 100px;
+        left: 100px;
+    }
+
+
+    .gaming-accesseries .content h3 {
+        font-size: 3rem;
+    }
+
+
+    .gaming-accesseries .content p {
+        font-size: 1.5rem;
+    }
+
+}
+
+
+/* -------------------------
+   Mobile
+   Maximum width: 575px
+-------------------------- */
+
+@media (max-width: 575px) {
+
+    /* Accessories Images */
+
+    .product-img {
+        height: 220px;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        padding: 35px 20px 15px;
+
+        text-align: center;
+    }
+
+
+    .footer-logo {
+        max-width: 150px;
+    }
+
+
+    .footer-col h4 {
+        font-size: 18px;
+    }
+
+
+    .social-icons {
+        justify-content: center;
+    }
+
+}

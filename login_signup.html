@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GameRealm Login</title>
+
+  <!-- Bootstrap 5 -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+  >
+
+
+  <style>
+
+    /* =========================
+       BODY
+    ========================= */
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background: url(./assets/bg.png);
+
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+
+    /* =========================
+       MAIN CONTAINER
+    ========================= */
+
+    .auth-container {
+      width: 100%;
+      padding: 20px;
+    }
+
+
+    /* =========================
+       AUTH CARD
+    ========================= */
+
+    .auth-card {
+      width: 100%;
+      max-width: 360px;
+
+      margin: auto;
+      padding: 24px;
+
+      border-radius: 14px;
+
+      background: rgba(2, 12, 29, 0.96);
+
+      border: 1px solid rgba(95, 132, 255, 0.25);
+
+      box-shadow:
+        0 0 25px rgba(0, 90, 255, 0.15),
+        0 0 40px rgba(113, 0, 255, 0.08);
+    }
+
+
+    /* =========================
+       LOGO
+    ========================= */
+
+    .brand {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .brand img {
+      width: 150px;
+      max-width: 100%;
+      height: auto;
+    }
+
+
+    /* =========================
+       HEADING
+    ========================= */
+
+    .auth-card h2 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: #8b9ab3;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+
+    /* =========================
+       LOGIN / SIGNUP TABS
+    ========================= */
+
+    .nav-pills {
+      background: #07162d;
+      padding: 4px;
+      border-radius: 9px;
+    }
+
+    .nav-pills .nav-link {
+      color: #8897ae;
+
+      font-size: 12px;
+
+      padding: 8px 10px;
+
+      border-radius: 7px;
+    }
+
+    .nav-pills .nav-link:hover {
+      color: white;
+    }
+
+    .nav-pills .nav-link.active {
+      color: white;
+
+      background:
+        linear-gradient(
+          90deg,
+          #5063ff,
+          #762cff
+        );
+    }
+
+
+    /* =========================
+       FORM
+    ========================= */
+
+    .form-label {
+      font-size: 12px;
+
+      color: #b7c0d4;
+
+      font-weight: 500;
+
+      margin-bottom: 6px;
+    }
+
+
+    /* =========================
+       INPUTS
+    ========================= */
+
+    .input-group-text,
+    .form-control {
+      background-color: #071b38;
+
+      border-color: #102c52;
+
+      color: white;
+
+      min-height: 42px;
+
+      font-size: 12px;
+    }
+
+    .input-group-text {
+      color: #8393ad;
+
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+
+    .form-control {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .form-control::placeholder {
+      color: #677895;
+    }
+
+    .form-control:focus {
+      background-color: #071b38;
+
+      color: white;
+
+      border-color: #6857ff;
+
+      box-shadow:
+        0 0 0 0.15rem
+        rgba(104, 87, 255, 0.15);
+    }
+
+
+    /* =========================
+       PASSWORD EYE
+    ========================= */
+
+    .password-toggle {
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .password-toggle:hover {
+      color: #ffffff;
+    }
+
+
+    /* =========================
+       CHECKBOX
+    ========================= */
+
+    .form-check-input {
+      background-color: #071b38;
+
+      border-color: #66758e;
+
+      width: 14px;
+      height: 14px;
+
+      margin-top: 2px;
+    }
+
+    .form-check-input:checked {
+      background-color: #6857ff;
+      border-color: #6857ff;
+    }
+
+    .form-check-label {
+      color: #8f9db4;
+      font-size: 11px;
+    }
+
+
+    /* =========================
+       FORGOT PASSWORD
+    ========================= */
+
+    .auth-link {
+      color: #786cff;
+
+      text-decoration: none;
+
+      font-size: 11px;
+    }
+
+    .auth-link:hover {
+      color: #a39aff;
+    }
+
+
+    /* =========================
+       BUTTON
+    ========================= */
+
+    .auth-btn {
+      min-height: 42px;
+
+      border: none;
+
+      border-radius: 7px;
+
+      color: white;
+
+      font-size: 13px;
+
+      font-weight: 600;
+
+      background:
+        linear-gradient(
+          90deg,
+          #4f63ff,
+          #7c2cff
+        );
+
+      transition: 0.2s ease;
+    }
+
+    .auth-btn:hover {
+      color: white;
+
+      transform: translateY(-1px);
+
+      background:
+        linear-gradient(
+          90deg,
+          #6474ff,
+          #8d45ff
+        );
+
+      box-shadow:
+        0 5px 20px
+        rgba(100, 70, 255, 0.25);
+    }
+
+
+    /* =========================
+       DIVIDER
+    ========================= */
+
+    .divider {
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      margin: 18px 0;
+
+      color: #8090a8;
+
+      font-size: 11px;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+
+      flex: 1;
+
+      height: 1px;
+
+      background: #18304e;
+    }
+
+
+    /* =========================
+       ALERT MESSAGE
+    ========================= */
+
+    .auth-message {
+      font-size: 11px;
+
+      padding: 8px 10px;
+
+      border-radius: 6px;
+
+      margin-bottom: 12px;
+    }
+
+
+    /* =========================
+       SIGNUP FORM
+    ========================= */
+
+    #signup .mb-3 {
+      margin-bottom: 12px !important;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 400px) {
+
+      .auth-container {
+        padding: 15px;
+      }
+
+      .auth-card {
+        max-width: 100%;
+        padding: 20px;
+      }
+
+      .brand img {
+        width: 135px;
+      }
+
+      .auth-card h2 {
+        font-size: 20px;
+      }
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       AUTH CONTAINER
+  ========================= -->
+
+  <div class="auth-container">
+
+
+    <!-- =========================
+         AUTH CARD
+    ========================= -->
+
+    <div class="auth-card">
+
+
+      <!-- =========================
+           BRAND
+      ========================= -->
+
+      <div class="text-center mb-3">
+
+        <div class="brand">
+
+          <img
+            src="./assets/header_logo1.png"
+            alt="GameRealm"
+          >
+
+        </div>
+
+
+        <h2 class="fw-bold">
+          Welcome Back!
+        </h2>
+
+
+        <p class="subtitle mb-0">
+          Login to your account to continue your journey.
+        </p>
+
+      </div>
+
+
+      <!-- =========================
+           LOGIN / SIGNUP TABS
+      ========================= -->
+
+      <ul
+        class="nav nav-pills nav-fill mb-3"
+        role="tablist"
+      >
+
+        <li class="nav-item">
+
+          <button
+            class="nav-link active"
+            data-bs-toggle="pill"
+            data-bs-target="#login"
+            type="button"
+          >
+            Login
+          </button>
+
+        </li>
+
+
+        <li class="nav-item">
+
+          <button
+            class="nav-link"
+            data-bs-toggle="pill"
+            data-bs-target="#signup"
+            type="button"
+          >
+            Sign Up
+          </button>
+
+        </li>
+
+      </ul>
+
+
+      <!-- =========================
+           TAB CONTENT
+      ========================= -->
+
+      <div class="tab-content">
+
+
+        <!-- =========================
+             LOGIN
+        ========================= -->
+
+        <div
+          class="tab-pane fade show active"
+          id="login"
+        >
+
+          <form id="loginForm">
+
+
+            <!-- Login Error -->
+
+            <div
+              id="loginMessage"
+              class="alert alert-danger auth-message d-none"
+            >
+            </div>
+
+
+            <!-- Username / Email -->
+
+            <div class="mb-3">
+
+              <label class="form-label">
+                Email or Username
+              </label>
+
+
+              <div class="input-group">
+
+                <span class="input-group-text">
+                  <i class="bi bi-person"></i>
+                </span>
+
+
+                <input
+                  type="text"
+                  id="loginUsername"
+                  class="form-control"
+                  placeholder="Enter your email or username"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+
+            <!-- Password -->
+
+            <div class="mb-3">
+
+              <label class="form-label">
+                Password
+              </label>
+
+
+              <div class="input-group">
+
+                <span class="input-group-text">
+                  <i class="bi bi-lock"></i>
+                </span>
+
+
+                <input
+                  type="password"
+                  id="loginPassword"
+                  class="form-control"
+                  placeholder="Enter your password"
+                  required
+                >
+
+
+                <span
+                  class="input-group-text password-toggle"
+                  onclick="togglePassword('loginPassword', this)"
+                >
+
+                  <i class="bi bi-eye"></i>
+
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <!-- Remember / Forgot -->
+
+            <div
+              class="d-flex
+                     justify-content-between
+                     align-items-center
+                     mb-3"
+            >
+
+           
+
+           
+
+            </div>
+
+
+            <!-- Login Button -->
+
+            <button
+              type="submit"
+              class="btn auth-btn w-100"
+            >
+              Login
+            </button>
+
+
+          </form>
+
+        </div>
+
+
+        <!-- =========================
+             SIGN UP
+        ========================= -->
+
+        <div
+          class="tab-pane fade"
+          id="signup"
+        >
+
+          <form id="signupForm">
+
+
+            <!-- Signup Message -->
+
+            <div
+              id="signupMessage"
+              class="auth-message d-none"
+            >
+            </div>
+
+
+            <!-- Username -->
+
+            <div class="mb-3">
+
+              <label class="form-label">
+                Username
+              </label>
+
+
+              <div class="input-group">
+
+                <span class="input-group-text">
+                  <i class="bi bi-person"></i>
+                </span>
+
+
+                <input
+                  type="text"
+                  id="signupUsername"
+                  class="form-control"
+                  placeholder="Choose a username"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+
+            <!-- Email -->
+
+            <div class="mb-3">
+
+              <label class="form-label">
+                Email
+              </label>
+
+
+              <div class="input-group">
+
+                <span class="input-group-text">
+                  <i class="bi bi-envelope"></i>
+                </span>
+
+
+                <input
+                  type="email"
+                  id="signupEmail"
+                  class="form-control"
+                  placeholder="Enter your email"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+
+            <!-- Password -->
+
+            <div class="mb-3">
+
+              <label class="form-label">
+                Password
+              </label>
+
+
+              <div class="input-group">
+
+                <span class="input-group-text">
+                  <i class="bi bi-lock"></i>
+                </span>
+
+
+                <input
+                  type="password"
+                  id="signupPassword"
+                  class="form-control"
+                  placeholder="Create a password"
+                  required
+                >
+
+
+                <span
+                  class="input-group-text password-toggle"
+                  onclick="togglePassword('signupPassword', this)"
+                >
+
+                  <i class="bi bi-eye"></i>
+
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <!-- Confirm Password -->
+
+            <div class="mb-3">
+
+              <label class="form-label">
+                Confirm Password
+              </label>
+
+
+              <div class="input-group">
+
+                <span class="input-group-text">
+                  <i class="bi bi-shield-lock"></i>
+                </span>
+
+
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  class="form-control"
+                  placeholder="Confirm your password"
+                  required
+                >
+
+
+                <span
+                  class="input-group-text password-toggle"
+                  onclick="togglePassword('confirmPassword', this)"
+                >
+
+                  <i class="bi bi-eye"></i>
+
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <!-- Create Account -->
+
+            <button
+              type="submit"
+              class="btn auth-btn w-100"
+            >
+              Create Account
+            </button>
+
+
+          </form>
+
+        </div>
+
+      </div>
+
+
+
+
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       BOOTSTRAP JS
+  ========================= -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+
+  <script>
+
+
+    // =========================================
+    // PASSWORD SHOW / HIDE
+    // =========================================
+
+    function togglePassword(inputId, button) {
+
+      const input =
+        document.getElementById(inputId);
+
+      const icon =
+        button.querySelector("i");
+
+
+      if (input.type === "password") {
+
+        input.type = "text";
+
+        icon.classList.remove("bi-eye");
+
+        icon.classList.add("bi-eye-slash");
+
+      }
+
+      else {
+
+        input.type = "password";
+
+        icon.classList.remove("bi-eye-slash");
+
+        icon.classList.add("bi-eye");
+
+      }
+
+    }
+
+
+    // =========================================
+    // SIGN UP
+    // =========================================
+
+    const signupForm =
+      document.getElementById("signupForm");
+
+
+    signupForm.addEventListener(
+      "submit",
+      function(event) {
+
+        event.preventDefault();
+
+
+        // Get values
+
+        const username =
+          document
+            .getElementById("signupUsername")
+            .value
+            .trim();
+
+
+        const email =
+          document
+            .getElementById("signupEmail")
+            .value
+            .trim();
+
+
+        const password =
+          document
+            .getElementById("signupPassword")
+            .value;
+
+
+        const confirmPassword =
+          document
+            .getElementById("confirmPassword")
+            .value;
+
+
+        const message =
+          document.getElementById(
+            "signupMessage"
+          );
+
+
+        // Hide old message
+
+        message.classList.add("d-none");
+
+
+        // =====================================
+        // CHECK PASSWORD
+        // =====================================
+
+        if (password !== confirmPassword) {
+
+          message.textContent =
+            "Passwords do not match.";
+
+          message.className =
+            "alert alert-danger auth-message";
+
+          return;
+        }
+
+
+        // =====================================
+        // GET EXISTING USERS
+        // =====================================
+
+        let users =
+          JSON.parse(
+            localStorage.getItem(
+              "gamerealmUsers"
+            )
+          ) || [];
+
+
+        // =====================================
+        // CHECK USERNAME
+        // =====================================
+
+        const usernameExists =
+          users.some(function(user) {
+
+            return (
+              user.username.toLowerCase() ===
+              username.toLowerCase()
+            );
+
+          });
+
+
+        if (usernameExists) {
+
+          message.textContent =
+            "Username already exists.";
+
+          message.className =
+            "alert alert-danger auth-message";
+
+          return;
+        }
+
+
+        // =====================================
+        // CHECK EMAIL
+        // =====================================
+
+        const emailExists =
+          users.some(function(user) {
+
+            return (
+              user.email.toLowerCase() ===
+              email.toLowerCase()
+            );
+
+          });
+
+
+        if (emailExists) {
+
+          message.textContent =
+            "Email already registered.";
+
+          message.className =
+            "alert alert-danger auth-message";
+
+          return;
+        }
+
+
+        // =====================================
+        // CREATE USER
+        // =====================================
+
+        const newUser = {
+
+          username: username,
+
+          email: email,
+
+          password: password
+
+        };
+
+
+        // Add user to array
+
+        users.push(newUser);
+
+
+        // =====================================
+        // SAVE USER IN LOCAL STORAGE
+        // =====================================
+
+        localStorage.setItem(
+          "gamerealmUsers",
+          JSON.stringify(users)
+        );
+
+
+        // =====================================
+        // SUCCESS MESSAGE
+        // =====================================
+
+        message.textContent =
+          "Account created successfully!";
+
+        message.className =
+          "alert alert-success auth-message";
+
+
+        // Clear signup form
+
+        signupForm.reset();
+
+
+        // =====================================
+        // SWITCH TO LOGIN AFTER 1 SECOND
+        // =====================================
+
+        setTimeout(function() {
+
+          const loginTab =
+            document.querySelector(
+              '[data-bs-target="#login"]'
+            );
+
+
+          const tab =
+            new bootstrap.Tab(loginTab);
+
+
+          tab.show();
+
+
+          // Clear message
+
+          message.classList.add("d-none");
+
+        }, 1000);
+
+      }
+    );
+
+
+    // =========================================
+    // LOGIN
+    // =========================================
+
+    const loginForm =
+      document.getElementById("loginForm");
+
+
+    loginForm.addEventListener(
+      "submit",
+      function(event) {
+
+        event.preventDefault();
+
+
+        // Get login values
+
+        const loginUsername =
+          document
+            .getElementById("loginUsername")
+            .value
+            .trim();
+
+
+        const loginPassword =
+          document
+            .getElementById("loginPassword")
+            .value;
+
+
+        const loginMessage =
+          document.getElementById(
+            "loginMessage"
+          );
+
+
+        // Hide old message
+
+        loginMessage.classList.add(
+          "d-none"
+        );
+
+
+        // =====================================
+        // GET SAVED USERS
+        // =====================================
+
+        const users =
+          JSON.parse(
+            localStorage.getItem(
+              "gamerealmUsers"
+            )
+          ) || [];
+
+
+        // =====================================
+        // FIND USER
+        // =====================================
+
+        const user =
+          users.find(function(user) {
+
+            const usernameMatch =
+              user.username.toLowerCase() ===
+              loginUsername.toLowerCase();
+
+
+            const emailMatch =
+              user.email.toLowerCase() ===
+              loginUsername.toLowerCase();
+
+
+            const passwordMatch =
+              user.password ===
+              loginPassword;
+
+
+            return (
+              (usernameMatch || emailMatch) &&
+              passwordMatch
+            );
+
+          });
+
+
+        // =====================================
+        // WRONG LOGIN
+        // =====================================
+
+        if (!user) {
+
+          loginMessage.textContent =
+            "Invalid username/email or password.";
+
+          loginMessage.className =
+            "alert alert-danger auth-message";
+
+          return;
+        }
+
+
+        // =====================================
+        // LOGIN SUCCESS
+        // =====================================
+
+        const currentUser = {
+
+          username: user.username,
+
+          email: user.email
+
+        };
+
+
+        // Save logged-in user
+
+        localStorage.setItem(
+          "gamerealmCurrentUser",
+          JSON.stringify(currentUser)
+        );
+
+
+        // =====================================
+        // GO TO INDEX PAGE
+        // =====================================
+
+        window.location.href =
+          "index.html";
+
+      }
+    );
+
+
+  </script>
+
+
+</body>
+
+</html>

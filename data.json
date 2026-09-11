@@ -1,0 +1,785 @@
+{
+  "products": [
+    {
+      "id": "CON-01",
+      "name": "PlayStation 5 Slim",
+      "category": "Console",
+      "brand": "Sony",
+      "image": "assets/consoles/ps5.png",
+      "rating": 4.8,
+      "reviews": 14200,
+      "platform": "PS5",
+      "storage": "1TB SSD",
+      "type": "Home Console",
+      "price": "$649.99"
+    },
+    {
+      "id": "CON-02",
+      "name": "PlayStation 5 Pro",
+      "category": "Console",
+      "brand": "Sony",
+      "image": "assets/consoles/ps5_pro.png",
+      "rating": 4.6,
+      "reviews": 3100,
+      "platform": "PS5 Pro",
+      "storage": "2TB SSD",
+      "type": "Home Console",
+      "price": "$899.99"
+    },
+    {
+      "id": "CON-03",
+      "name": "PlayStation 4 Pro",
+      "category": "Console",
+      "brand": "Sony",
+      "image": "assets/consoles/ps4pro.png",
+      "rating": 4.7,
+      "reviews": 28500,
+      "platform": "PS4",
+      "storage": "1TB HDD",
+      "type": "Home Console",
+      "price": "$399.99"
+    },
+    {
+      "id": "CON-04",
+      "name": "Xbox Series X",
+      "category": "Console",
+      "brand": "Microsoft",
+      "image": "assets/consoles/xbox_x.png",
+      "rating": 4.7,
+      "reviews": 11800,
+      "platform": "Xbox",
+      "storage": "1TB SSD",
+      "type": "Home Console",
+      "price": "$799.99"
+    },
+    {
+      "id": "CON-05",
+      "name": "Xbox Series S",
+      "category": "Console",
+      "brand": "Microsoft",
+      "image": "assets/consoles/xbox_s.png",
+      "rating": 4.6,
+      "reviews": 16400,
+      "platform": "Xbox",
+      "storage": "512GB SSD",
+      "type": "Home Console (Digital)",
+      "price": "$599.99"
+    },
+    {
+      "id": "CON-06",
+      "name": "Xbox One X",
+      "category": "Console",
+      "brand": "Microsoft",
+      "image": "assets/consoles/xbox_one_x.png",
+      "rating": 4.5,
+      "reviews": 19200,
+      "platform": "Xbox One",
+      "storage": "1TB HDD",
+      "type": "Home Console",
+      "price": "$499.99"
+    },
+    {
+      "id": "CON-07",
+      "name": "Nintendo Switch OLED",
+      "category": "Console",
+      "brand": "Nintendo",
+      "image": "assets/consoles/swithc_oled.png",
+      "rating": 4.8,
+      "reviews": 22100,
+      "platform": "Switch",
+      "storage": "64GB",
+      "type": "Hybrid Console",
+      "price": "$399.99"
+    },
+    {
+      "id": "CON-08",
+      "name": "Nintendo Switch Lite",
+      "category": "Console",
+      "brand": "Nintendo",
+      "image": "assets/consoles/switch_lite.png",
+      "rating": 4.7,
+      "reviews": 18900,
+      "platform": "Switch",
+      "storage": "32GB",
+      "type": "Handheld Console",
+      "price": "$199.99"
+    },
+    {
+      "id": "CON-09",
+      "name": "Nintendo Switch 2",
+      "category": "Console",
+      "brand": "Nintendo",
+      "image": "assets/consoles/switch2.png",
+      "rating": 4.9,
+      "reviews": 8500,
+      "platform": "Switch 2",
+      "storage": "256GB",
+      "type": "Hybrid Console",
+      "price": "$499.99"
+    },
+    {
+      "id": "CON-10",
+      "name": "Steam Deck OLED",
+      "category": "Console",
+      "brand": "Valve",
+      "image": "assets/consoles/steme_deck.png",
+      "rating": 4.9,
+      "reviews": 9400,
+      "platform": "PC Handheld",
+      "storage": "512GB NVMe SSD",
+      "type": "Handheld Gaming PC",
+      "price": "$789.00"
+    },
+    {
+      "id": "GM-01",
+      "name": "God of War Ragnarök",
+      "category": "Game",
+      "brand": "",
+      "image": "assets/games/god_of_war_ragnork_1.png",
+      "rating": 4.9,
+      "reviews": 18500,
+      "genre": "Action-Adventure",
+      "publisher": "PlayStation Studios",
+      "platforms": [
+        "PS5",
+        "PS4",
+        "PC"
+      ],
+      "price": "$69.99"
+    },
+    {
+      "id": "GM-02",
+      "name": "God of War 3",
+      "category": "Game",
+      "brand": "",
+      "image": "assets/games/god_of_war_3.png",
+      "rating": 4.9,
+      "reviews": 34000,
+      "genre": "Action-Adventure",
+      "publisher": "PlayStation Studios",
+      "platforms": [
+        "PS3",
+        "PS4",
+        "PC"
+      ],
+      "price": "$19.99"
+    },
+    {
+      "id": "GM-03",
+      "name": "Red Dead Redemption 2",
+      "category": "Game",
+      "brand": "",
+      "image": "assets/games/rdr2_2.png",
+      "rating": 4.8,
+      "reviews": 45000,
+      "genre": "Open World Action",
+      "publisher": "Rockstar Games",
+      "platforms": [
+        "PS4",
+        "Xbox One",
+        "PC"
+      ],
+      "price": "$59.99"
+    },
+    {
+      "id": "GM-04",
+      "name": "Grand Theft Auto V",
+      "category": "Game",
+      "brand": "",
+      "image": "assets/games/gta5_3.png",
+      "rating": 4.7,
+      "reviews": 89000,
+      "genre": "Open World Action",
+      "publisher": "Rockstar Games",
+      "platforms": [
+        "PS5",
+        "PS4",
+        "Xbox Series X/S",
+        "Xbox One",
+        "PC"
+      ],
+      "price": "$39.99"
+    },
+    {
+      "id": "GM-05",
+      "name": "Grand Theft Auto VI",
+      "category": "Game",
+      "brand": "",
+      "image": "assets/games/gta4_2.png",
+      "rating": 5.0,
+      "reviews": 12000,
+      "genre": "Open World Action",
+      "publisher": "Rockstar Games",
+      "platforms": [
+        "PS5",
+        "Xbox Series X/S"
+      ],
+      "price": "$99.99"
+    },
+    {
+      "id": "GM-06",
+      "name": "The Last of Us Part I",
+      "category": "Game",
+      "brand": "",
+      "image": "assets/games/lou_4.png",
+      "rating": 4.8,
+      "reviews": 9200,
+      "genre": "Action-Adventure / Survival Horror",
+      "publisher": "PlayStation Studios",
+      "platforms": [
+        "PS5",
+        "PC"
+      ],
+      "price": "$59.99"
+    },
+    {
+      "id": "GM-07",
+      "name": "The Last of Us Part II",
+      "category": "Game",
+      "brand": "",
+      "image": "assets/games/lou_6.png",
+      "rating": 4.5,
+      "reviews": 27500,
+      "genre": "Action-Adventure / Survival Horror",
+      "publisher": "PlayStation Studios",
+      "platforms": [
+        "PS4",
+        "PS5"
+      ],
+      "price": "$49.99"
+    },
+    {
+      "id": "GM-08",
+      "name": "Fortnite",
+      "category": "Game",
+      "brand": "",
+      "image": "assets/games/fortnite_18.png",
+      "rating": 4.6,
+      "reviews": 125000,
+      "genre": "Battle Royale / Action",
+      "publisher": "Epic Games",
+      "platforms": [
+        "PC",
+        "PS4",
+        "PS5",
+        "Xbox One",
+        "Xbox Series X|S",
+        "Nintendo Switch",
+        "Android"
+      ],
+      "price": "Free-to-Play"
+    },
+    {
+      "id": "GM-09",
+      "name": "PUBG: Battlegrounds",
+      "category": "Game",
+      "brand": "",
+      "image": "assets/games/pubg_17.png",
+      "rating": 4.7,
+      "reviews": 98000,
+      "genre": "Battle Royale / Shooter",
+      "publisher": "KRAFTON",
+      "platforms": [
+        "PC",
+        "PS4",
+        "PS5",
+        "Xbox One",
+        "Xbox Series X|S"
+      ],
+      "price": "Free-to-Play"
+    },
+    {
+      "id": "GM-10",
+      "name": "Elden Ring",
+      "category": "Game",
+      "brand": "",
+      "image": "assets/games/elderright_8.png",
+      "rating": 4.9,
+      "reviews": 38000,
+      "genre": "Action RPG",
+      "publisher": "Bandai Namco",
+      "platforms": [
+        "PS5",
+        "PS4",
+        "Xbox Series X/S",
+        "Xbox One",
+        "PC"
+      ],
+      "price": "$59.99"
+    },
+    {
+      "id": "GM-11",
+      "name": "Hogwarts Legacy",
+      "category": "Game",
+      "brand": "",
+      "image": "assets/games/hogwarts_legacy_9.png",
+      "rating": 4.6,
+      "reviews": 29000,
+      "genre": "Open World RPG",
+      "publisher": "Warner Bros. Games",
+      "platforms": [
+        "PS5",
+        "PS4",
+        "Xbox Series X/S",
+        "Xbox One",
+        "Switch",
+        "PC"
+      ],
+      "price": "$49.99"
+    },
+    {
+      "id": "GM-12",
+      "name": "Cyberpunk 2077",
+      "category": "Game",
+      "brand": "",
+      "image": "assets/games/cyber_punk_19.png",
+      "rating": 4.4,
+      "reviews": 31200,
+      "genre": "Action RPG",
+      "publisher": "CD Projekt Red",
+      "platforms": [
+        "PS5",
+        "Xbox Series X/S",
+        "PC",
+        "Switch 2"
+      ],
+      "price": "$59.99"
+    },
+    {
+      "id": "GM-13",
+      "name": "Assassin's Creed Shadows",
+      "category": "Game",
+      "brand": "",
+      "image": "assets/games/creed_10.png",
+      "rating": 4.5,
+      "reviews": 6800,
+      "genre": "Action RPG",
+      "publisher": "Ubisoft",
+      "platforms": [
+        "PS5",
+        "Xbox Series X/S",
+        "PC"
+      ],
+      "price": "$69.99"
+    },
+    {
+      "id": "GM-14",
+      "name": "Ghost of Tsushima",
+      "category": "Game",
+      "brand": "",
+      "image": "assets/games/ghost_of_thusima_5.png",
+      "rating": 4.9,
+      "reviews": 26000,
+      "genre": "Action-Adventure",
+      "publisher": "PlayStation Studios",
+      "platforms": [
+        "PS5",
+        "PS4",
+        "PC"
+      ],
+      "price": "$49.99"
+    },
+    {
+      "id": "GM-15",
+      "name": "Black Myth: Wukong",
+      "category": "Game",
+      "brand": "",
+      "image": "assets/games/wukong_11.png",
+      "rating": 4.8,
+      "reviews": 22400,
+      "genre": "Action RPG",
+      "publisher": "Game Science",
+      "platforms": [
+        "PS5",
+        "PC",
+        "Xbox Series X/S"
+      ],
+      "price": "$59.99"
+    },
+    {
+      "id": "GM-16",
+      "name": "Minecraft",
+      "category": "Game",
+      "brand": "",
+      "image": "assets/games/mincraft_12.png",
+      "rating": 4.8,
+      "reviews": 112000,
+      "genre": "Sandbox / Survival",
+      "publisher": "Mojang Studios",
+      "platforms": [
+        "Cross-Platform"
+      ],
+      "price": "$29.99"
+    },
+    {
+      "id": "GM-17",
+      "name": "Call of Duty: Black Ops 6",
+      "category": "Game",
+      "brand": "",
+      "image": "assets/games/cod_16.png",
+      "rating": 4.3,
+      "reviews": 14500,
+      "genre": "First-Person Shooter",
+      "publisher": "Activision",
+      "platforms": [
+        "PS5",
+        "PS4",
+        "Xbox Series X/S",
+        "Xbox One",
+        "PC"
+      ],
+      "price": "$69.99"
+    },
+    {
+      "id": "GM-18",
+      "name": "EA Sports FC 26",
+      "category": "Game",
+      "brand": "",
+      "image": "assets/games/fc26_13.png",
+      "rating": 4.2,
+      "reviews": 7900,
+      "genre": "Sports Simulation",
+      "publisher": "EA Sports",
+      "platforms": [
+        "PS5",
+        "PS4",
+        "Xbox Series X/S",
+        "Xbox One",
+        "Switch",
+        "Switch 2",
+        "PC"
+      ],
+      "price": "$69.99"
+    },
+    {
+      "id": "GM-19",
+      "name": "Forza Horizon 5",
+      "category": "Game",
+      "brand": "",
+      "image": "assets/games/horizan_14.png",
+      "rating": 4.7,
+      "reviews": 19800,
+      "genre": "Racing",
+      "publisher": "Xbox Game Studios",
+      "platforms": [
+        "Xbox Series X/S",
+        "Xbox One",
+        "PC"
+      ],
+      "price": "$59.99"
+    },
+    {
+      "id": "GM-20",
+      "name": "Resident Evil 4",
+      "category": "Game",
+      "brand": "",
+      "image": "assets/games/re4_15.png",
+      "rating": 4.9,
+      "reviews": 15600,
+      "genre": "Survival Horror",
+      "publisher": "Capcom",
+      "platforms": [
+        "PS5",
+        "PS4",
+        "Xbox Series X/S",
+        "PC"
+      ],
+      "price": "$59.99"
+    },
+    {
+      "id": "ACC-01",
+      "name": "PlayStation DualSense Controller",
+      "category": "Accessory",
+      "subcategory": "Controllers / Gamepads",
+      "brand": "Sony",
+      "image": "assets/accesseries/dualshock_1.png",
+      "rating": 4.7,
+      "reviews": 32000,
+      "connectivity": "Wireless",
+      "compatibility": [
+        "PS5",
+        "PC",
+        "Mobile"
+      ],
+      "price": "$74.99"
+    },
+    {
+      "id": "ACC-02",
+      "name": "Xbox Wireless Controller",
+      "category": "Accessory",
+      "subcategory": "Controllers / Gamepads",
+      "brand": "Microsoft",
+      "image": "assets/accesseries/xbox_controller_2.png",
+      "rating": 4.7,
+      "reviews": 29500,
+      "connectivity": "Wireless",
+      "compatibility": [
+        "Xbox Series X/S",
+        "Xbox One",
+        "PC",
+        "Mobile"
+      ],
+      "price": "$64.99"
+    },
+    {
+      "id": "ACC-03",
+      "name": "Nintendo Switch Pro Controller",
+      "category": "Accessory",
+      "subcategory": "Controllers / Gamepads",
+      "brand": "Nintendo",
+      "image": "assets/accesseries/nintendo_controller_3.png",
+      "rating": 4.8,
+      "reviews": 18200,
+      "connectivity": "Wireless",
+      "compatibility": [
+        "Nintendo Switch",
+        "PC"
+      ],
+      "price": "$69.99"
+    },
+    {
+      "id": "ACC-04",
+      "name": "8BitDo Ultimate Controller",
+      "category": "Accessory",
+      "subcategory": "Controllers / Gamepads",
+      "brand": "8BitDo",
+      "image": "assets/accesseries/8bit_4.png",
+      "rating": 4.6,
+      "reviews": 7400,
+      "connectivity": "2.4G / Bluetooth / Wired",
+      "compatibility": [
+        "PC",
+        "Switch",
+        "Android"
+      ],
+      "price": "$59.99"
+    },
+    {
+      "id": "ACC-05",
+      "name": "RGB Wireless Gaming Gamepad",
+      "category": "Accessory",
+      "subcategory": "Controllers / Gamepads",
+      "brand": "Generic / Universal",
+      "image": "assets/accesseries/rgb_5.png",
+      "rating": 4.1,
+      "reviews": 2100,
+      "connectivity": "Wireless",
+      "compatibility": [
+        "PC",
+        "Android",
+        "iOS",
+        "Switch"
+      ],
+      "price": "$24.99"
+    },
+    {
+      "id": "ACC-06",
+      "name": "PlayStation Pulse Elite Headset",
+      "category": "Accessory",
+      "subcategory": "Headsets",
+      "brand": "Sony",
+      "image": "assets/accesseries/ps_head_6.png",
+      "rating": 4.4,
+      "reviews": 5100,
+      "connectivity": "PlayStation Link Wireless / Bluetooth",
+      "compatibility": [
+        "PS5",
+        "PC",
+        "PlayStation Portal"
+      ],
+      "price": "$149.99"
+    },
+    {
+      "id": "ACC-07",
+      "name": "Xbox Wireless Headset",
+      "category": "Accessory",
+      "subcategory": "Headsets",
+      "brand": "Microsoft",
+      "image": "assets/accesseries/xbox_head_7.png",
+      "rating": 4.5,
+      "reviews": 8900,
+      "connectivity": "Xbox Wireless / Bluetooth",
+      "compatibility": [
+        "Xbox Series X/S",
+        "Xbox One",
+        "PC"
+      ],
+      "price": "$99.99"
+    },
+    {
+      "id": "ACC-08",
+      "name": "SteelSeries Arctis Nova 7",
+      "category": "Accessory",
+      "subcategory": "Headsets",
+      "brand": "SteelSeries",
+      "image": "assets/accesseries/steel_head__8.png",
+      "rating": 4.7,
+      "reviews": 11300,
+      "connectivity": "2.4GHz Wireless / Bluetooth",
+      "compatibility": [
+        "Multi-Platform"
+      ],
+      "price": "$179.99"
+    },
+    {
+      "id": "ACC-09",
+      "name": "Logitech G733 Gaming Headset",
+      "category": "Accessory",
+      "subcategory": "Headsets",
+      "brand": "Logitech",
+      "image": "assets/accesseries/logi_tech_9.png",
+      "rating": 4.6,
+      "reviews": 14200,
+      "connectivity": "LIGHTSPEED Wireless",
+      "compatibility": [
+        "PC",
+        "PS5",
+        "PS4"
+      ],
+      "price": "$129.99"
+    },
+    {
+      "id": "ACC-10",
+      "name": "Logitech G Pro X Gaming Keyboard",
+      "category": "Accessory",
+      "subcategory": "Keyboard / Mouse",
+      "brand": "Logitech",
+      "image": "assets/accesseries/logitech_key_10.png",
+      "rating": 4.6,
+      "reviews": 9100,
+      "type": "Mechanical TKL",
+      "switches": "Swappable Mechanical",
+      "price": "$149.99"
+    },
+    {
+      "id": "ACC-11",
+      "name": "Razer BlackWidow Gaming Keyboard",
+      "category": "Accessory",
+      "subcategory": "Keyboard / Mouse",
+      "brand": "Razer",
+      "image": "assets/accesseries/razor_key_11.png",
+      "rating": 4.7,
+      "reviews": 16500,
+      "type": "Mechanical Full-Size",
+      "switches": "Razer Mechanical Green/Yellow",
+      "price": "$139.99"
+    },
+    {
+      "id": "ACC-12",
+      "name": "Logitech G502 Gaming Mouse",
+      "category": "Accessory",
+      "subcategory": "Keyboard / Mouse",
+      "brand": "Logitech",
+      "image": "assets/accesseries/logiteck_mouse_12.png",
+      "rating": 4.8,
+      "reviews": 42000,
+      "sensor": "HERO 25K",
+      "type": "Wired/Wireless Ergonomic",
+      "price": "$79.99"
+    },
+    {
+      "id": "ACC-13",
+      "name": "Razer DeathAdder Gaming Mouse",
+      "category": "Accessory",
+      "subcategory": "Keyboard / Mouse",
+      "brand": "Razer",
+      "image": "assets/accesseries/razer_mouse_13.png",
+      "rating": 4.7,
+      "reviews": 38000,
+      "sensor": "Optical Sensor",
+      "type": "Ergonomic Esports Mouse",
+      "price": "$69.99"
+    },
+    {
+      "id": "ACC-14",
+      "name": "HDMI 2.1 Gaming Cable",
+      "category": "Accessory",
+      "subcategory": "Cables / Charging",
+      "brand": "Universal",
+      "image": "assets/accesseries/hdmi_16.png",
+      "rating": 4.8,
+      "reviews": 12400,
+      "spec": "4K @ 120Hz / 8K @ 60Hz",
+      "length": "2 Meters / 6.6 Feet",
+      "price": "$14.99"
+    },
+    {
+      "id": "ACC-15",
+      "name": "USB-C Controller Charging Cable",
+      "category": "Accessory",
+      "subcategory": "Cables / Charging",
+      "brand": "Universal",
+      "image": "assets/accesseries/usb_charging_15.png",
+      "rating": 4.6,
+      "reviews": 8900,
+      "spec": "Braided Fast-Charging",
+      "length": "3 Meters / 10 Feet",
+      "price": "$9.99"
+    },
+    {
+      "id": "ACC-16",
+      "name": "DualSense Charging Station",
+      "category": "Accessory",
+      "subcategory": "Cables / Charging",
+      "brand": "Sony",
+      "image": "assets/accesseries/dual_charging_16.png",
+      "rating": 4.8,
+      "reviews": 21500,
+      "capacity": "2 DualSense Controllers",
+      "type": "Docking Station",
+      "price": "$29.99"
+    },
+    {
+      "id": "ACC-17",
+      "name": "Multi-Port USB Gaming Hub",
+      "category": "Accessory",
+      "subcategory": "Cables / Charging",
+      "brand": "Universal",
+      "image": "assets/accesseries/multiport_17.png",
+      "rating": 4.4,
+      "reviews": 4300,
+      "ports": "4x USB 3.0 Ports",
+      "compatibility": "PC, Consoles",
+      "price": "$19.99"
+    },
+    {
+      "id": "ACC-18",
+      "name": "RGB Gaming Mouse Pad",
+      "category": "Accessory",
+      "subcategory": "Other Gaming Gear",
+      "brand": "Universal",
+      "image": "assets/accesseries/gamepad_18.png",
+      "rating": 4.5,
+      "reviews": 15200,
+      "size": "Extended XL (800x300mm)",
+      "lighting": "14 RGB Modes",
+      "price": "$34.99"
+    },
+    {
+      "id": "ACC-19",
+      "name": "Gaming Controller Stand",
+      "category": "Accessory",
+      "subcategory": "Other Gaming Gear",
+      "brand": "Universal",
+      "image": "assets/accesseries/controller_stand_19.png",
+      "rating": 4.7,
+      "reviews": 6800,
+      "capacity": "2 Controllers or Headset + Controller",
+      "material": "Acrylic / Metal",
+      "price": "$19.99"
+    },
+    {
+      "id": "ACC-20",
+      "name": "Console Cooling Stand",
+      "category": "Accessory",
+      "subcategory": "Other Gaming Gear",
+      "brand": "Universal",
+      "image": "assets/accesseries/console_cooling_20.png",
+      "rating": 4.3,
+      "reviews": 5400,
+      "features": "Dual Fans, Controller Charging Docks, Game Storage",
+      "compatibility": "PS5 / Xbox Series X",
+      "price": "$34.99"
+    }
+  ]
+}

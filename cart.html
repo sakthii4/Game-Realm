@@ -1,0 +1,1013 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Game Realm - Cart</title>
+
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <style>
+      body {
+        background: #0e0e16;
+        color: white;
+        min-height: 100vh;
+      }
+
+      .custom-header {
+        background: #151522;
+        padding: 15px 0;
+      }
+
+      .custom-link {
+        color: #fff !important;
+      }
+
+      .custom-link:hover {
+        color: #9b5cff !important;
+      }
+
+      .btn-purple {
+        background: #7c3aed;
+        color: white;
+        border: none;
+      }
+
+      .btn-purple:hover {
+        background: #6d28d9;
+        color: white;
+      }
+
+      #cart-size {
+        background: #ee0505;
+        color: yellow ;
+        border-radius: 50%;
+        font-size: 12px;
+        padding: 3px 7px;
+        position: relative;
+        top: -15px;
+        left: -5px;
+      }
+
+      .cart-title {
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+
+      .cart-item {
+        background: #181824;
+        border: 1px solid #29293a;
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+
+      .cart-image {
+        width: 120px;
+        height: 120px;
+        object-fit: contain;
+        border-radius: 10px;
+        /* background: #fff; */
+        padding: 10px;
+        border: 1px solid #f8f8f8;
+        
+      }
+
+      .quantity-box {
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid #444;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .quantity-box button {
+        background: #29293a;
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+      }
+
+      .quantity-box button:hover {
+        background: #7c3aed;
+      }
+
+      .quantity-box span {
+        width: 45px;
+        text-align: center;
+        font-weight: 600;
+      }
+
+      .remove-btn {
+        background: transparent;
+        color: #ff5c5c;
+        border: 1px solid #ff5c5c;
+        border-radius: 7px;
+        padding: 7px 13px;
+      }
+
+      .remove-btn:hover {
+        background: #ff5c5c;
+        color: white;
+      }
+
+      .summary-box {
+        background: #181824;
+        border: 1px solid #29293a;
+        border-radius: 15px;
+        padding: 25px;
+        position: sticky;
+        top: 20px;
+      }
+
+      .summary-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+      }
+
+      .total-row {
+        border-top: 1px solid #444;
+        padding-top: 18px;
+        font-size: 21px;
+        font-weight: bold;
+      }
+
+      .empty-cart {
+        text-align: center;
+        padding: 80px 20px;
+        background: #181824;
+        border-radius: 15px;
+      }
+
+      .empty-cart i {
+        font-size: 70px;
+        color: #7c3aed;
+        margin-bottom: 20px;
+      }
+
+      .footer {
+        background: #151522;
+        margin-top: 80px;
+        padding: 50px 0 20px;
+      }
+
+      .footer-logo {
+        width: 150px;
+        margin-bottom: 15px;
+      }
+
+      .footer h4 {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      .footer-col a {
+        color: #aaa;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .footer-col a:hover {
+        color: #9b5cff;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 15px;
+      }
+
+      .social-icons a {
+        font-size: 20px;
+        color: white;
+      }
+
+      .copyright {
+        text-align: center;
+        color: #aaa;
+        padding-top: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .cart-image {
+          width: 90px;
+          height: 90px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg custom-header">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="./index.html">
+          <img
+            src="./assets/header_logo1.png"
+            alt="Game Realm Logo"
+            height="40"
+          />
+        </a>
+
+        <!-- Mobile toggle -->
+        <button
+          class="navbar-toggler navbar-dark"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#headerNavbar"
+          aria-controls="headerNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="headerNavbar">
+          <!-- Navigation -->
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4 text-center">
+            <li class="nav-item">
+              <a class="nav-link custom-link" href="./index.html"> Home </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link custom-link" href="./consoles.html">
+                Consoles
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link custom-link" href="./games.html"> Games </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link custom-link" href="./accesseries.html">
+                Accessories
+              </a>
+            </li>
+          </ul>
+
+          <!-- Right actions -->
+          <div class="d-flex flex-column flex-lg-row align-items-center gap-3">
+            <a href="./cart.html" class="nav-link custom-link">
+              <i class="fa-solid fa-cart-shopping h2"></i>
+              <span id="cart-size">0</span>
+            </a>
+
+            <button type="button" onclick="{location.href='./login_signup.html'}"  id="user-name" class="btn btn-purple">
+              Log in / Sign up
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <section class="container my-5">
+        <h1 class="cart-title">Shopping Cart</h1>
+
+        <!-- JavaScript will insert cart UI here -->
+        <div class="cart row g-4" id="cart-container"></div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Logo -->
+          <div class="col-12 col-sm-6 col-md-3 footer-col">
+            <img
+              src="./assets/header_logo1.png"
+              class="footer-logo"
+              alt="Gaming Store Logo"
+            />
+
+            <p>Play, Shop, Level Up</p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-12 col-sm-6 col-md-3 footer-col">
+            <h4>Quick Links</h4>
+
+            <a href="./index.html">Home</a>
+            <a href="./consoles.html">Console</a>
+            <a href="./accesseries.html">Accessories</a>
+            <a href="./cart.html">Cart</a>
+          </div>
+
+          <!-- Customer Service -->
+          <div class="col-12 col-sm-6 col-md-3 footer-col">
+            <h4>Customer Service</h4>
+
+            <a href="#">Contact Us</a>
+            <a href="#">Shipping Policy</a>
+            <a href="#">Return Policy</a>
+            <a href="#">FAQ</a>
+          </div>
+
+          <!-- Social -->
+          <div class="col-12 col-sm-6 col-md-3  footer-col">
+            <h4>Follow Us</h4>
+
+            <div class="social-icons text-center">
+              <a href="#" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+
+              <a href="#" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+
+              <a href="#" aria-label="Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+
+              <a href="#" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+
+              <a href="#" aria-label="Discord">
+                <i class="fa-brands fa-discord"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="copyright">
+          <p>© 2026 Gaming Store. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Order Success Modal -->
+    <div
+      class="modal fade"
+      id="orderSuccessModal"
+      tabindex="-1"
+      aria-labelledby="orderSuccessModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white border-secondary">
+          <div class="modal-header border-secondary">
+            <h5 class="modal-title" id="orderSuccessModalLabel">
+              Order Placed
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body text-center py-4">
+            <i class="fa-solid fa-circle-check text-success fs-1 mb-3"></i>
+            <h4>Order Confirmed!</h4>
+            <p class="text-secondary mb-0">
+              Your order has been placed successfully.
+            </p>
+          </div>
+
+          <div class="modal-footer border-secondary">
+            <button
+              type="button"
+              class="btn btn-purple w-100"
+              data-bs-dismiss="modal"
+            >
+              Continue Shopping
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- CART JAVASCRIPT -->
+    <script>
+      /*
+      Expected cart item:
+
+      {
+        id: 1,
+        name: "PlayStation 5",
+        price: 499.99,
+        image: "./assets/ps5.png",
+        quantity: 1
+      }
+    */
+
+      const cartContainer = document.getElementById("cart-container");
+
+      const cartSize = document.getElementById("cart-size");
+
+      // --------------------------------
+      // GET CART
+      // --------------------------------
+
+      function getCart() {
+        try {
+          const savedCart = JSON.parse(localStorage.getItem("cart"));
+
+          if (Array.isArray(savedCart)) {
+            return savedCart;
+          }
+
+          return [];
+        } catch (error) {
+          console.error("Unable to read cart:", error);
+
+          return [];
+        }
+      }
+
+      // --------------------------------
+      // SAVE CART
+      // --------------------------------
+
+      function saveCart(cart) {
+        localStorage.setItem("cart", JSON.stringify(cart));
+      }
+
+      // --------------------------------
+      // SAFE PRICE
+      // --------------------------------
+
+      function getPrice(item) {
+        let price = item.price;
+
+        /*
+        Handles prices like:
+
+        499
+        "499"
+        "$499"
+        "$499.99"
+        "₹499"
+      */
+
+        if (typeof price === "string") {
+          price = price.replace(/[^0-9.-]+/g, "");
+        }
+
+        price = Number(price);
+
+        return isNaN(price) ? 0 : price;
+      }
+
+      // --------------------------------
+      // CURRENCY
+      // --------------------------------
+
+      function formatPrice(price) {
+        return "$" + Number(price).toFixed(2);
+      }
+
+      // --------------------------------
+      // CART COUNT
+      // --------------------------------
+
+      function updateCartSize() {
+        const cart = getCart();
+
+        const totalQuantity = cart.reduce((total, item) => {
+          return total + (Number(item.quantity) || 1);
+        }, 0);
+
+        cartSize.textContent = totalQuantity;
+      }
+
+      // --------------------------------
+      // INCREASE
+      // --------------------------------
+
+      function increaseQuantity(index) {
+        const cart = getCart();
+
+        if (!cart[index]) {
+          return;
+        }
+
+        cart[index].quantity = Number(cart[index].quantity) || 1;
+
+        cart[index].quantity++;
+
+        saveCart(cart);
+
+        renderCart();
+      }
+
+      // --------------------------------
+      // DECREASE
+      // --------------------------------
+
+      function decreaseQuantity(index) {
+        const cart = getCart();
+
+        if (!cart[index]) {
+          return;
+        }
+
+        cart[index].quantity = Number(cart[index].quantity) || 1;
+
+        if (cart[index].quantity > 1) {
+          cart[index].quantity--;
+        } else {
+          // Remove product if quantity reaches 0
+          cart.splice(index, 1);
+        }
+
+        saveCart(cart);
+
+        renderCart();
+      }
+
+      // --------------------------------
+      // REMOVE ITEM
+      // --------------------------------
+
+      function removeItem(index) {
+        const cart = getCart();
+
+        cart.splice(index, 1);
+
+        saveCart(cart);
+
+        renderCart();
+      }
+
+      // --------------------------------
+      // CLEAR CART
+      // --------------------------------
+
+      function clearCart() {
+        localStorage.removeItem("cart");
+
+        renderCart();
+      }
+
+      // --------------------------------
+      // CALCULATE CART TOTAL
+      // --------------------------------
+
+      function calculateSubtotal(cart) {
+        return cart.reduce((total, item) => {
+          const price = getPrice(item);
+
+          const quantity = Number(item.quantity) || 1;
+
+          return total + price * quantity;
+        }, 0);
+      }
+
+      // --------------------------------
+      // RENDER CART
+      // --------------------------------
+
+      function renderCart() {
+        const cart = getCart();
+
+        updateCartSize();
+
+        // EMPTY CART
+        if (cart.length === 0) {
+          cartContainer.innerHTML = `
+          <div class="col-12">
+
+            <div class="empty-cart">
+
+              <i
+                class="fa-solid fa-cart-shopping"
+              ></i>
+
+              <h2>
+                Your cart is empty
+              </h2>
+
+              <p class="text-secondary">
+                Add some gaming products to
+                your cart.
+              </p>
+
+              <a
+                href="./games.html"
+                class="btn btn-purple mt-3"
+              >
+                Continue Shopping
+              </a>
+
+            </div>
+
+          </div>
+        `;
+
+          return;
+        }
+
+        // -----------------------------
+        // CALCULATIONS
+        // -----------------------------
+
+        const subtotal = calculateSubtotal(cart);
+
+        // Change these if needed
+        const shipping = 0;
+
+        const tax =  subtotal * 0.05;
+
+        const total = subtotal + shipping + tax;
+
+        // -----------------------------
+        // PRODUCTS HTML
+        // -----------------------------
+
+        let productsHTML = "";
+
+        cart.forEach((item, index) => {
+          const price = getPrice(item);
+
+          const quantity = Number(item.quantity) || 1;
+
+          // IMPORTANT:
+          // Line subtotal changes with quantity
+          const itemSubtotal = price * quantity;
+
+          productsHTML += `
+
+            <div class="cart-item">
+
+              <div
+                class="
+                  row
+                  align-items-center
+                  g-3
+                "
+              >
+
+                <!-- Image -->
+                <div
+                  class="
+                    col-12
+                    col-sm-3
+                    text-center
+                  "
+                >
+
+                  <img
+                    src="${item.image || "./assets/favicon.png"}"
+                    alt="${item.name || "Product"}"
+                    class="cart-image"
+                  />
+
+                </div>
+
+
+                <!-- Product information -->
+                <div
+                  class="
+                    col-12
+                    col-sm-9
+                    col-lg-3
+                  "
+                >
+
+                  <h5>
+                    ${item.name || item.title || "Product"}
+                  </h5>
+
+                  <p
+                    class="
+                      text-secondary
+                      mb-1
+                    "
+                  >
+                    Unit Price:
+                  </p>
+
+                  <strong>
+                    ${formatPrice(price)}
+                  </strong>
+
+                </div>
+
+
+                <!-- Quantity -->
+                <div
+                  class="
+                    col-6
+                    col-lg-2
+                    text-center
+                  "
+                >
+
+                  <p class="mb-2">
+                    Quantity
+                  </p>
+
+                  <div class="quantity-box">
+
+                    <button
+                      type="button"
+                      onclick="
+                        decreaseQuantity(
+                          ${index}
+                        )
+                      "
+                    >
+                      <i
+                        class="
+                          fa-solid
+                          fa-minus
+                        "
+                      ></i>
+                    </button>
+
+
+                    <span>
+                      ${quantity}
+                    </span>
+
+
+                    <button
+                      type="button"
+                      onclick="
+                        increaseQuantity(
+                          ${index}
+                        )
+                      "
+                    >
+                      <i
+                        class="
+                          fa-solid
+                          fa-plus
+                        "
+                      ></i>
+                    </button>
+
+                  </div>
+
+                </div>
+
+
+                <!-- Subtotal -->
+                <div
+                  class="
+                    col-6
+                    col-lg-2
+                    text-center
+                  "
+                >
+
+                  <p class="mb-2">
+                    Subtotal
+                  </p>
+
+                  <strong>
+                    ${formatPrice(itemSubtotal)}
+                  </strong>
+
+                </div>
+
+
+                <!-- Remove -->
+                <div
+                  class="
+                    col-12
+                    col-lg-2
+                    text-center
+                  "
+                >
+
+                  <button
+                    type="button"
+                    class="remove-btn"
+                    onclick="
+                      removeItem(${index})
+                    "
+                  >
+
+                    <i
+                      class="
+                        fa-solid
+                        fa-trash
+                      "
+                    ></i>
+
+                    Remove
+
+                  </button>
+
+                </div>
+
+              </div>
+
+            </div>
+          `;
+        });
+
+        // -----------------------------
+        // FINAL UI
+        // -----------------------------
+
+        cartContainer.innerHTML = `
+
+        <!-- Product list -->
+        <div class="col-lg-8">
+
+          ${productsHTML}
+
+          <div
+            class="
+              d-flex
+              justify-content-between
+              flex-wrap
+              gap-2
+              mt-3
+            "
+          >
+
+            <a
+              href="./games.html"
+              class="
+                btn
+                btn-outline-light
+              "
+            >
+              <i
+                class="
+                  fa-solid
+                  fa-arrow-left
+                  me-2
+                "
+              ></i>
+
+              Continue Shopping
+            </a>
+
+
+            <button
+              type="button"
+              onclick="clearCart()"
+              class="
+                btn
+                btn-outline-danger
+              "
+            >
+
+              Clear Cart
+
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- Cart summary -->
+        <div class="col-lg-4">
+
+          <div class="summary-box">
+
+            <h3 class="mb-4">
+              Order Summary
+            </h3>
+
+
+            <div class="summary-row">
+
+              <span>
+                Subtotal
+              </span>
+
+              <strong id="cart-subtotal">
+                ${formatPrice(subtotal)}
+              </strong>
+
+            </div>
+
+
+            <div class="summary-row">
+
+              <span>
+                Shipping
+              </span>
+
+              <strong>
+                ${shipping === 0 ? "Free" : formatPrice(shipping)}
+              </strong>
+
+            </div>
+
+
+            <div class="summary-row">
+
+              <span>
+                Tax
+              </span>
+
+              <strong>
+                ${formatPrice(tax)}
+              </strong>
+
+            </div>
+
+
+            <div
+              class="
+                summary-row
+                total-row
+              "
+            >
+
+              <span>
+                Total
+              </span>
+
+              <span id="cart-total">
+                ${formatPrice(total)}
+              </span>
+
+            </div>
+
+
+            <button
+              type="button"
+              class="btn btn-purple w-100 mt-3 py-3"
+              data-bs-toggle="modal"
+              data-bs-target="#orderSuccessModal"
+            >
+              Proceed to Payment
+            </button>
+
+          </div>
+
+        </div>
+      `;
+      }
+
+
+
+       
+           const userName = document.getElementById('user-name')
+           const user = JSON.parse(localStorage.getItem('gamerealmCurrentUser'))
+
+
+                    function logOut(){
+                         let userInput = confirm('Do you want to Log out...?')
+
+                         if(userInput){
+                            
+                             localStorage.removeItem('gamerealmCurrentUser')
+                             alert('Log out successfully')
+
+
+                             window.location.href = './index.html'
+
+                         }
+
+                    }
+
+
+                    if(user){
+                        userName.textContent = user.username;
+                        userName.classList.remove('btn-purple')
+                        userName.classList.add('btn-outline-primary')
+                        userName.classList.add('text-white')
+                        userName.onclick = logOut
+
+                    }
+          
+        
+
+      // --------------------------------
+      // INITIAL LOAD
+      // --------------------------------
+
+      document.addEventListener("DOMContentLoaded", renderCart);
+    </script>
+  </body>
+</html>
